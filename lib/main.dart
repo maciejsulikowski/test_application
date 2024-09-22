@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:test_application/text_widget.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-// ignore: prefer_match_file_name
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -65,6 +63,23 @@ class _RandomColorScreenState extends State<RandomColorScreen> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class TextWidget extends StatelessWidget {
+  const TextWidget({
+    required this.textColor,
+    super.key,
+  });
+
+  final Color textColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      'Hello there',
+      style: TextStyle(color: textColor),
     );
   }
 }
